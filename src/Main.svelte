@@ -59,12 +59,12 @@
   }
 
   async function handleSend() {
-    if(sending) return;
-      sending=true;
-
     try {
       validateNetwork();
       if(!valid_network) return;
+      
+      if(sending) return;
+        sending=true;
     
       let token_to_send = token;
       if( custom_token ) token_to_send = custom;
@@ -216,7 +216,7 @@
 
   <h2 class="text-2xl font-bold text-center">Transfer to EOS account</h2>
   <p class="text-lg mt-4 text-gray-600 text-center">{msg}</p>
-  <div class="mt-8 max-w-md">
+  <div class="mt-8 mr-4 ml-4 max-w-md">
     <div class="grid grid-cols-1 gap-6">
       <!-- svelte-ignore a11y-label-has-associated-control -->
       <label class="block">
