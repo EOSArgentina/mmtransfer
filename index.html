@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+
+		
+
+		<link rel="modulepreload" href="/_app/start-4a7c276e.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-eef8c157.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-efd622e2.js">
+		<link rel="modulepreload" href="/_app/pages/index.svelte-46464fb7.js">
+		<link rel="stylesheet" href="/_app/assets/start-d5b4de3e.css">
+		<link rel="stylesheet" href="/_app/assets/vendor-7dd51af7.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-466125ff.css">
+
+		<script type="module">
+			import { start } from "/_app/start-4a7c276e.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/__layout.svelte-efd622e2.js"),
+						import("/_app/pages/index.svelte-46464fb7.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+<ul class="_toastContainer svelte-7xr3c1"></ul>
+<div class="w-full h-full flex items-center justify-center"><div class="py-12 w-96 flex-col"><div class="flex justify-center"><img src="metamask-fox.svg" width="50%"></div>
+
+  <h2 class="text-2xl font-bold text-center">Transfer to EOS account</h2>
+  <p class="text-lg mt-4 text-gray-600 text-center">This is a helper tool to transfer tokens from Metamask to any EOS account.</p>
+  <div class="mt-8 max-w-md"><div class="grid grid-cols-1 gap-6">
+      <label class="block"><span class="text-gray-700">Token to transfer</span>
+        <select class="block w-full mt-1"><option value="4,EOS,eosio.token">EOS</option><option value="4,USDT,tethertether">USDT</option><option value="3,IQ,everipediaiq">IQ</option><option value="4,TPT,eosiotptoken">TPT</option><option value="8,CHEX,chexchexchex">CHEX</option><option value="4,DAPP,dappservices">DAPP</option><option value="8,OGX,core.ogx">OGX</option><option value="6,BOX,token.defi">BOX</option><option value="4,DFS,minedfstoken">DFS</option><option value="4,USN,danchortoken">USN</option><option value="4,DEX,token.newdex">DEX</option><option value="8,PBTC,btc.ptokens">PBTC</option><option value="4,VIG,vig111111111">VIG</option><option value="4,VIGOR,vigortoken11">VIGOR</option><option value="9,PETH,eth.ptoken">PETH</option><option value="--other--">--other--</option></select></label>
+
+      <label class="block"><span class="text-gray-700">Destination account</span>
+        <input type="text" class="mt-1 block w-full" placeholder="" value=""></label>
+      <label class="block"><span class="text-gray-700">Amount</span>
+        <input type="email" class="mt-1 block w-full" placeholder="" value=""></label>
+      <label class="block"><span class="text-gray-700">Memo</span>
+        <textarea class="mt-1 block w-full" rows="3"></textarea></label>
+      <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white text-center py-2 px-4 rounded">Login
+      </a></div></div></div></div>
+
+
+
+			
+		</div>
+	</body>
+</html>
