@@ -31,6 +31,11 @@
       "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906": Number(59)  //EOS Mainnet
   };
 
+  let clientmap = {
+      95: "https://kylin.eosargentina.io",
+      59: "https://api.eosargentina.io"
+  }
+
   onMount(handleOnMount);
 
   function validateNetwork() {
@@ -73,7 +78,9 @@
       if(parts.length != 3) throw Error('Invalid token');
       if(Number(amount) <= 0) throw Error('Amount must be positive');
 
-      let api = new APIClient({url:'https://api.eosargentina.io'});
+      let url = clientmap[current_network];
+
+      let api = new APIClient({url});
       let res = await api.v1.chain.get_table_rows({
         code           : 'etheraccount',
         scope          : 'etheraccount',
